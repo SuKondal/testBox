@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Cucumber-JVM Html Reports - Feature:  </title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="blue/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="blue/css/skin/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="blue/css/960.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="blue/css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="blue/css/text.css" type="text/css" media="screen" />
+<link rel="shortcut icon" href="blue/favicon.ico" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+
+<style>
+
+h2 {
+	font-size: 24px !important;
+}
+
+.feature-keyword {
+	font-weight: bold;
+}
+
+.feature-description {
+	padding-left: 15px;
+	font-style: italic;
+	background-color: beige;
+}
+
+.feature-role {
+	font-weight: bold;
+}
+
+.feature-action {
+	font-weight: bold;
+}
+
+.feature-value {
+	font-weight: bold;
+}
+
+.feature-tags {
+	padding-top: 10px;
+	padding-left: 15px;
+	color: darkblue;
+}
+
+.element-keyword {
+	font-weight: bold;
+	padding-left: 15px;
+}
+
+.element-element_name {
+	padding-left: 15px;
+}
+
+.step-keyword {
+	font-weight: bold;
+	padding-left: 50px;
+}
+
+.error_message {
+	background-color: #FFEEEE;
+	padding-left: 50px;
+	border: 1px solid #D88A8A;
+	margin-bottom: 5px;
+	overflow: auto;
+}
+
+.error_collapse {
+	display:none;
+	padding-left: 10px;
+}
+
+.error_collapse + label {
+	font-size: 15px;
+	font-weight: bold;
+	display: block;
+	cursor: pointer;
+	padding-top: 2px;
+}
+
+.error_collapse + label + * {
+	display: none;
+    padding-left: 25px;
+}
+
+.error_collapse:checked + label + * {
+	display: block;
+}
+
+.error_collapse + label:before {
+	background-color: #4F5150;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	color: #FFFFFF;
+	content: "+";
+	display: block;
+	float: left;
+	line-height: 20px;
+	width: 20px;
+	margin-right: 5px;
+	text-align: center;
+}
+
+.error_collapse:checked + label:before {
+	content: "\2212";
+}
+
+.step-duration {
+	float: right;
+	padding-right: 15px;
+}
+
+.passed {
+	background-color: #C5D88A;
+}
+
+.failed {
+	background-color: #D88A8A;
+}
+
+.skipped {
+	background-color: #88AAFF;
+}
+
+.pending {
+	background-color: #FBB907;
+}
+
+.undefined {
+	background-color: #FBB987;
+}
+
+.missing {
+	background-color: #FBB9D7;
+}
+
+table.stats-table {
+	color: black;
+	width: 100%;
+	border-width: 1px;
+	border-spacing: 2px;
+	border-style: outset;
+	border-color: gray;
+	border-collapse: collapse;
+	background-color: white;
+}
+
+table.stats-table th {
+	color: black;
+	border-width: 1px;
+	padding: 5px;
+	border-style: inset;
+	border-color: gray;
+	background-color: #66CCEE;
+	-moz-border-radius:;
+}
+
+table.stats-table td {
+	color: black;
+	text-align: center;
+	border-width: 1px;
+	padding: 5px;
+	border-style: inset;
+	border-color: gray;
+	background-color: white;
+	-moz-border-radius:;
+}
+
+table.data-table {
+	color: black;
+	border-width: 1px;
+	border-spacing: 2px;
+	border-style: outset;
+	border-color: #d6d6d6;
+	border-collapse: collapse;
+	background-color: beige;
+}
+
+table.data-table th {
+	color: black;
+	border-width: 1px;
+	padding: 5px;
+	border-style: inset;
+	border-color: #d6d6d6;
+	background-color: #66CCEE;
+}
+
+table.data-table td {
+	color: black;
+	text-align: center;
+	border-width: 1px;
+	padding: 5px;
+	border-style: inset;
+	border-color: #d6d6d6;
+	background-color: beige;
+}
+
+.data {
+	padding-left: 50px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.output-data {
+	padding-left: 50px;
+	background-color: beige;
+	text-indent: 50px;
+}
+
+.doc-string {
+	width: auto;
+	display: inline-block;
+	margin: 10px auto 10px 70px;
+	padding: 10px;
+	background-color: rgba(255, 255, 255, 0.35);
+	border-radius: 10px;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 95%;
+}
+
+.graph {
+	margin-bottom: 50px;
+	margin-top: 30px;
+	clear: both;
+	font-family: georgia, serif;
+	font-size: 14px;
+}
+
+.graph-header h3 {
+	margin-bottom: 0px;
+}
+
+.graph-header {
+	text-align: center;
+}
+
+.graph-header p {
+	margin-top: 0px;
+}
+
+.graph .legend td, .graph .legend, .graph .legend tr {
+	padding: 0px;
+	margin: 0px;
+	border-collapse: collapse;
+}
+
+.graph .legend {
+	margin-left: 10px;
+}
+
+.graph .legend td {
+	padding-right: 5px;
+}
+
+.graph .legend .color-box {
+	width: 14px;
+	height: 10px;
+	overflow: hidden;
+}
+
+.graph .label {
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: block;
+	position: absolute;
+	right: -5px;
+	top: 15px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+}
+
+table#tablesorter thead tr th {
+	cursor: pointer;
+}
+
+</style>
+</head>
+<body id="top">
+
+     <div id="fullwidth_header">
+     <div class="container_12">
+         <h1 class="grid_4 logo"><a href="feature-overview.html" class='ie6fix'>Cucumber</a></h1>
+
+         <div id="nav">
+             <ul>
+                                  <li><a href="tag-overview.html">Tags</a></li>
+                 <li><a href="feature-overview.html">Feature</a></li>
+                 <li><a href="step-overview.html">Steps</a></li>
+             </ul>
+         </div>
+     </div>
+</div>
+
+        <div id="fullwidth_gradient">
+    <div class="container_12">
+        <div class="grid_9 heading">
+            <h2 id="feature-title">Result for <span style="color:#66CCEE;"><i></i></span> in build: 1</h2>
+        </div>
+    </div>
+</div>
+
+    <div class="container_12">
+        <div class="grid_12">
+
+            <div>
+                <table class="stats-table">
+                                        <thead>
+    <tr>
+                <th></th>
+        <th id="stats-header-scenarios" colspan="3">Scenarios</th>
+        <th id="stats-header-steps" colspan="7">Steps</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+            <th id="stats-header-key">Feature</th>
+                        <th id="stats-header-scenarios-total">Total</th>
+            <th id="stats-header-scenarios-passed">Passed</th>
+            <th id="stats-header-scenarios-failed">Failed</th>
+            <th id="stats-header-steps-total">Total</th>
+            <th id="stats-header-steps-passed"    style="background-color:#00CE00;">Passed</th>
+            <th id="stats-header-steps-failed"    style="background-color:#FF0000;">Failed</th>
+            <th id="stats-header-steps-skipped"   style="background-color:#88AAFF;">Skipped</th>
+            <th id="stats-header-steps-pending"   style="background-color:#FBB907;">Pending</th>
+            <th id="stats-header-steps-undefined" style="background-color:#FBB957;">Undefined</th>
+            <th id="stats-header-steps-missing"   style="background-color:#FBB9A7;">Missing</th>
+            <th id="stats-header-duration">Duration</th>
+            <th id="stats-header-status">Status</th>
+    </tr>
+</thead>
+                    
+                    
+                    <tr>
+                        <td><a id="stats-" href="productSearch-feature.html"></a></td>
+                                                <td id="stats-number-scenarios-">2</td>
+                        <td id="stats-number-scenarios-passed-">1</td>
+                        <td id="stats-number-scenarios-failed-">1</td>
+                        <td id="stats-number-steps-">10</td>
+                        <td id="stats-number-steps-passed-">7</td>
+                        <td id="stats-number-steps-failed-"      style="background-color:#FF0000;" >1</td>
+                        <td id="stats-number-steps-skipped-"      style="background-color:#88AAFF;" >2</td>
+                        <td id="stats-number-steps-pending-"   >0</td>
+                        <td id="stats-number-steps-undefined-" >0</td>
+                        <td id="stats-number-steps-missing-"   >0</td>
+                        <td id="stats-duration-" style="text-align:right;white-space:nowrap">1m 19s 190ms</td>
+                        <td id="stats-status-" style="background-color: #FF0000;">failed</td></tr>
+
+                </table>
+
+            </div>
+
+        <div style="color:black;">
+
+            <div class="feature-tags"></div>
+            
+            <i>As a Resmed site PO I want to make sure that product list displayed on the site is as expected 
+and verify that it is not affected by other changes of application</i>
+
+                            <div class="feature-tags"></div>
+                
+                <div class="passed"><span class="element-keyword">Background: </span></div>
+                                    <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">I am on the home page of the site</span><span class="step-duration">07s 550ms</span></div>
+                    
+                                        <div class="output-data">
+                                        </div>
+                                
+                            <div class="feature-tags"></div>
+                <div class="passed"><span class="step-keyword">Before </span><i>Hooks.setUp()</i><span class="step-duration"></span></div>
+                <div class="failed"><span class="element-keyword">Scenario Outline: </span></div>
+                                    <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I select &quot;Nasal Mask&quot; for search</span><span class="step-duration">07s 309ms</span></div>
+                    
+                                        <div class="output-data">
+                                        </div>
+                                    <div class="failed"><span class="step-keyword">Then  </span><span class="step-name">I get the list of products containing &quot;AirFit P10&quot;</span><span class="step-duration">11s 537ms</span><pre class="error_message"><input class="error_collapse" id="error_956770740" type="checkbox"><label for="error_956770740">org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"link text","selector":"AirFit P10"}</label><div>Command duration or timeout: 11.51 seconds<br/>For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br/>Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'<br/>System info: host: 'DeltaOne', ip: '192.168.8.100', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.7.0_79'<br/>*** Element info: {Using=link text, value=AirFit P10}<br/>Session ID: 2ef11e2b-dcd2-4b19-846b-e116f8b3d9de<br/>Driver info: org.openqa.selenium.firefox.FirefoxDriver<br/>Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=38.0.6}]<br/>	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br/>	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)<br/>	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br/>	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)<br/>	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)<br/>	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)<br/>	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)<br/>	at pages.ProductsPage.verifySearchResults(ProductsPage.java:56)<br/>	at stepsDef.ProductSearchSteps.iGetTheListOfProductsContaining(ProductSearchSteps.java:62)<br/>	at ✽.Then I get the list of products containing "AirFit P10"(productSearch.feature:12)<br/>Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"link text","selector":"AirFit P10"}<br/>For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br/>Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'<br/>System info: host: 'DeltaOne', ip: '192.168.8.100', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.7.0_79'<br/>Driver info: driver.version: unknown<br/>	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Temp/anonymous2625901535039516591webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)<br/>	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Temp/anonymous2625901535039516591webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)<br/></div></pre></div>
+                    
+                                        <div class="output-data">
+                                        </div>
+                                    <div class="skipped"><span class="step-keyword">And  </span><span class="step-name">Search results take you to the Page &quot;AirFit P10 | ResMed&quot;</span><span class="step-duration">000ms</span></div>
+                    
+                                        <div class="output-data">
+                                        </div>
+                                    <div class="skipped"><span class="step-keyword">And  </span><span class="step-name">should have a video link &quot;AirFit P10 - How to fit&quot;</span><span class="step-duration">000ms</span></div><span style="color:red">Attachment number 0, has unsupported mimetype 'image/jpeg'.<br>File the bug <a href="https://github.com/damianszczepanik/cucumber-reporting/issues">here</a> so support will be added!</span>
+                    
+                                        <div class="output-data">
+                                        </div>
+                                <div class="passed"><span class="step-keyword">After </span><i>Hooks.teardown(Scenario)</i><span class="step-duration"></span></div>
+                            <div class="feature-tags"></div>
+                
+                <div class="passed"><span class="element-keyword">Background: </span></div>
+                                    <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">I am on the home page of the site</span><span class="step-duration">07s 156ms</span></div>
+                    
+                                        <div class="output-data">
+                                        </div>
+                                
+                            <div class="feature-tags"></div>
+                <div class="passed"><span class="step-keyword">Before </span><i>Hooks.setUp()</i><span class="step-duration"></span></div>
+                <div class="passed"><span class="element-keyword">Scenario Outline: </span></div>
+                                    <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I select &quot;Nasal Pillow&quot; for search</span><span class="step-duration">07s 415ms</span></div>
+                    
+                                        <div class="output-data">
+                                        </div>
+                                    <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">I get the list of products containing &quot;Swift FX Bella&quot;</span><span class="step-duration">01s 241ms</span></div>
+                    
+                                        <div class="output-data">
+                                        </div>
+                                    <div class="passed"><span class="step-keyword">And  </span><span class="step-name">Search results take you to the Page &quot;Swift FX Bella | ResMed&quot;</span><span class="step-duration">36s 977ms</span></div>
+                    
+                                        <div class="output-data">
+                                        </div>
+                                    <div class="passed"><span class="step-keyword">And  </span><span class="step-name">should have a video link &quot;Swift FX Bella - How to fit&quot;</span><span class="step-duration">000ms</span></div>
+                    
+                                        <div class="output-data">
+                                        </div>
+                                <div class="passed"><span class="step-keyword">After </span><i>Hooks.teardown(Scenario)</i><span class="step-duration"></span></div>
+                </div>
+</div>
+
+
+<div class="container_12">
+    <div class="grid_12 hr"></div>
+    <div class="grid_12">
+        <p style="text-align:center">
+            <a href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+            <a href="https://github.com/damianszczepanik/cucumber-reporting">Cucumber reports</a>
+            <br>build: 01-11-2016 11:39:50</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+#surefire
+#Thu Oct 27 16:48:58 AEDT 2016
+user.dir=C\:\\MavenWorkspace\\appTest
+cucumber.options=tags @reg
+env=testEnv1
+idea.version=2016.2.5
+localRepository=C\:\\Users\\Su\\.m2\\repository
+basedir=C\:\\MavenWorkspace\\appTest
